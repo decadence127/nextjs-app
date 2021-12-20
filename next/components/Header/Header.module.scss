@@ -1,0 +1,48 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  border-bottom: 1px solid #eaeaea;
+  min-height: 4rem;
+  .appTitle {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 12rem;
+
+    padding-left: 3rem;
+    font-weight: 600;
+    font-size: larger;
+  }
+
+  ul {
+    display: flex;
+    padding-right: 2rem;
+    height: 4rem;
+    margin: 0;
+    li {
+      list-style-type: none;
+      padding: 0.2rem;
+      cursor: pointer;
+      width: 6rem;
+      margin: 0 0.5rem 0 0.5rem;
+      height: 100%;
+      font-weight: 500;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: ease-in-out 0.4s;
+      &:hover {
+        color: gray;
+        background-color: rgba($color: #000000, $alpha: 0.1);
+      }
+    }
+  }
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+}
