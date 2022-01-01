@@ -1,6 +1,6 @@
 import { Body, Controller, Get, Post } from '@nestjs/common';
 import { CreateMessageModel } from '../model/message.model';
-import { Message, MessageSchema } from '../schemas/message.schema';
+import { Message } from '../schemas/message.schema';
 import { MessageService } from '../services/message.service';
 
 @Controller('messages')
