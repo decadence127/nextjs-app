@@ -13,6 +13,9 @@ export class Message {
 
   @Prop({ required: true })
   recieverId: string;
+
+  @Prop({ required: true })
+  sendDate: string = new Date().toLocaleDateString();
 }
 
 export const MessageSchema = SchemaFactory.createForClass(Message);
