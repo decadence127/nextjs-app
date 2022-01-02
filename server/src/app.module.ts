@@ -6,6 +6,7 @@ import { AppService } from './app.service';
 import { ChatGateway } from './chat.gateway';
 import { MessageModule } from './messages/modules/message.module';
 import { UserModule } from './users/modules/user.module';
+import { JwtStrategy } from './users/strategy/jwt.strategy';
 @Module({
   imports: [
     UserModule,
@@ -14,6 +15,6 @@ import { UserModule } from './users/modules/user.module';
     MongooseModule.forRoot(process.env.MONGO_URI),
   ],
   controllers: [AppController],
-  providers: [AppService, ChatGateway],
+  providers: [AppService, ChatGateway, JwtStrategy],
 })
 export class AppModule {}
